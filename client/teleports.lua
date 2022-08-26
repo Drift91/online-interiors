@@ -360,12 +360,18 @@ local function DrawMenu(teleport)
 	end
 end
 
+local player; local vehicle
 Citizen.CreateThread(function()
 	while (true) do
-		local player = PlayerPedId()
-		local vehicle = GetVehiclePedIsIn(player, false)
+		player = PlayerPedId()
+		vehicle = GetVehiclePedIsIn(player, false)
+		Citizen.Wait(0)
+	end
+end)
 
-		for i,var in pairs(teleports) do
+for i,var in pairs(teleports) do
+	Citizen.CreateThread(function()
+		while (true) do
 			if (#var.dest > 0) then
 				local distance = nil
 				if (vehicle == 0) then
@@ -395,10 +401,12 @@ Citizen.CreateThread(function()
 							end 
 						end
 					end
+				else
+					Citizen.Wait(500)
 				end
 			end
-		end
 
-		Citizen.Wait(0)
-	end
-end)
+			Citizen.Wait(0)
+		end
+	end)
+end
