@@ -373,11 +373,11 @@ for i,var in pairs(teleports) do
 	Citizen.CreateThread(function()
 		while (true) do
 			if (#var.dest > 0) then
-				local distance = nil
+				local distance
 				if (vehicle == 0) then
-					distance = GetDistanceBetweenCoords(GetEntityCoords(player), var.x, var.y, var.z + 1.0, true)
+					distance = #(GetEntityCoords(player) - vector3(var.x, var.y, var.z + 1.0))
 				else
-					distance = GetDistanceBetweenCoords(GetEntityCoords(vehicle), var.x, var.y, var.z + 1.0, true)
+					distance = #(GetEntityCoords(vehicle) - vector3(var.x, var.y, var.z + 1.0))
 				end
 				
 				if (distance < 100.0) then
