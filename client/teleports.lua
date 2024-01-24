@@ -178,7 +178,80 @@ local teleports = {
 	[152] = {text = "Richards Majestic Helipad", dest = {50,51,52,53}, x = -903.17, y = -369.94, z = 136.28, h = 116.96},
 	[153] = {text = "Nightclub Office", dest = {154}, x = -1618.43, y = -3007.99, z = -75.20, h = 174.46},
 	[154] = {text = "Nightclub Basement", dest = {153}, x = -1507.66, y = -3024.46, z = -79.24, h = 177.89},
-	[155] = {text = "Del Perro Heights Garage", dest = {54,55,56,57}, x = -1456.37, y = -514.44, z = 31.58, h = 211.62}
+	[155] = {text = "Del Perro Heights Garage", dest = {54,55,56,57}, x = -1456.37, y = -514.44, z = 31.58, h = 211.62},
+	-- Casino
+	--[186] = {text = "Enter Penthouse", dest = {187}, x = 969.34, y = 63.38, z = 112.55, h = 246.11},
+	--[187] = {text = "Enter Roof Terrace", dest = {186}, x = 967.78, y = 63.67, z = 112.55, h = 61.74},
+	[188] = {text = "Casino Lobby", dest = {189}, x = 960.04, y = 43.18, z = 71.70, h = 285.70},
+	--[189] = {text = "Casino Penthouse", dest = {188,190}, x = 980.62, y = 56.60, z = 116.16, h = 7.43},
+	[189] = {text = "Casino Rooftop", dest = {188}, x = 964.87, y = 58.62, z = 112.55, h = 61.51},
+	[190] = {text = "Casino Helipad", dest = {191}, x = 959.62, y = 32.17, z = 120.23, h = 154.19},
+	[191] = {text = "Casino Management", dest = {190}, x = 994.17, y = 56.12, z = 75.06, h = 239.96},
+	--[193] = {text = "Exit Casino", dest = {194}, x = 935.98, y = 46.24, z = 81.10, h = 152.99},
+	--[194] = {text = "Enter Casino", dest = {193}, x = 1089.61, y = 206.12, z = -49.00, h = 11.29},
+	-- Pillbox
+	[195] = {text = "Basement", dest = {197,198}, x = 343.40, y = -581.73, z = 28.8, h = 75.31},
+	[196] = {text = "Ground Floor", dest = {197,198}, x = 342.32, y = -585.56, z = 28.8, h = 244.79},
+	[197] = {text = "First Floor", dest = {195,196,198}, x = 332.15, y = -595.67, z = 43.28, h = 69.33},
+	[198] = {text = "Helipad", dest = {195,196,197}, x = 338.99, y = -583.95, z = 74.16, h = 259.56},
+
+	-- Bahama Mamas
+	[199] = {text = "Bar Front", dest = {200}, x = -1385.29, y = -606.63, z = 30.32, h = 123.47},
+	[200] = {text = "Bar Back", dest = {199}, x = -1371.55, y = -626.02, z = 30.82, h = 120.81},
+
+	-- Triads
+	[201] = {text = "Basement", dest = {202,203}, x = -817.86, y = -709.56, z = 23.78, h = 89.68}, 
+	[202] = {text = "First Floor", dest = {201,203}, x = -817.57, y = -709.57, z = 28.06, h = 97.80},
+	[203] = {text = "Second Floor", dest = {201,202}, x = -817.80, y = -709.64, z = 32.34, h = 87.69},
+	[204] = {text = "Basement", dest = {205,206}, x = -817.63, y = -705.42, z = 23.78, h = 89.86},
+	[205] = {text = "First Floor", dest = {204,206}, x = -817.72, y = -705.40, z = 28.06, h = 87.50},
+	[206] = {text = "Second Floor", dest = {204,205}, x = -817.59, y = -705.43, z = 32.34, h = 91.40},
+	
+--[[ CHANGES TO BE MADE FROM OLD SCRIPT VVV
+	-- Weapons Dealer --
+	[200] = {id = 200, x = -590.10, y = -1622.42, z = 33.01, h = 191.88, name = "Enter", destination = {201}},
+	[201] = {id = 201, x = -590.10, y = -1620.32, z = 33.01, h = 1357.28, name = "Enter", destination = {200}},
+	[196] = {id = 196, x = 969.34, y = 63.38, z = 112.55, h = 246.11, name = "Enter Penthouse", destination = {204}},
+	[204] = {id = 204, x = 967.78, y = 63.67, z = 112.55, h = 61.74, name = "Enter Roof Terrace", destination = {196}},
+	[190] = {id = 190, x = 1085.37, y = 214.44, z = -49.20, h = 7.43, name = "Casino Lobby", destination = {212,191,197}},
+	[212] = {id = 212, x = 1545.24, y = 254.34, z = -46.01, h = 16.43, name = "Casino Club", destination = {190,191,197}},
+	[191] = {id = 191, x = 980.62, y = 56.60, z = 116.16, h = 7.43, name = "Casino Penthouse", destination = {212,190,197}},
+	[197] = {id = 197, x = 964.87, y = 58.62, z = 112.55, h = 61.51, name = "Casino Roof Top", destination = {212,190,191}},
+	[199] = {id = 199, x = 959.62, y = 32.17, z = 120.23, h = 154.19, name = "Casino Helipad", destination = {207}},
+	[207] = {id = 207, x = 1107.55, y = 243.20, z = -45.84, h = 276.41, name = "Casino Management Office", destination = {199}},
+	[210] = {id = 210, x = 1119.45, y = 267.14, z = -51.04, h = 181.35, name = "Casino Management Ground Floor", destination = {211}},
+	[211] = {id = 211, x = 1119.46, y = 267.19, z = -45.84, h = 182.96, name = "Casino Management 1st Floor", destination = {210}},
+	[205] = {id = 205, x = 935.98, y = 46.96, z = 81.10, h = 152.99, name = "Exit Casino", destination = {206}},
+	[206] = {id = 206, x = 1089.61, y = 206.12, z = -49.00, h = 11.29, name = "Enter Casino", destination = {205}},
+	[208] = {id = 208, x = 1121.11, y = 214.73, z = -49.44, h = 103.71, name = "Exit Cashier", destination = {209}},
+	[209] = {id = 209, x = 1120.81, y = 221.87, z = -49.44, h = 93.28, name = "Enter Cashier", destination = {208}},
+	
+	-- Morgue --
+	[213] = {id = 213, x = 295.54, y = -1448.88, z = 29.97, h = 327.56, name = "Exit Morgue", destination = {214}},
+	[214] = {id = 214, x = 275.30, y = -1361.19, z = 24.54, h = 47.69, name = "Enter Morgue", destination = {213}},
+
+	-- Yachts
+	[215] = {id = 215, x = -3523.80, y = 738.41, z = 5.89, h = 89.63, name = "Enter Yacht", destination = {216}}, -- Chumash
+	[216] = {id = 216, x = -3499.84, y = 738.58, z = 5.89, h = 91.96, name = "Exit Yacht", destination = {215}}, -- Chumash
+	[217] = {id = 217, x = 50.59, y = -3255.65, z = 5.89, h = 357.05, name = "Exit Yacht", destination = {218}}, --10075 ls
+	[218] = {id = 218, x = 50.66, y = -3279.54, z = 5.89, h = 189.35, name = "Enter Yacht", destination = {217}}, -- 10075 ls
+	[219] = {id = 219, x = -1710.45, y = 5324.15, z = 5.89, h = 259.04, name = "Exit Yacht", destination = {220}}, -- 1106 Chilliad 
+	[220] = {id = 220, x = -1734.40, y = 5328.32, z = 5.89, h = 84.45, name = "Enter Yacht", destination = {219}}, -- 1106 Chilliad
+
+	-- Recording Studio
+	[221] = {id = 221, x = -840.35, y = -231.84, z = 37.23, h = 308.98, name = "Exit Record A Studios", destination = {222}}, -- 1106 Chilliad
+	[222] = {id = 222, x = -1021.72, y = -92.25, z = -99.4, h = 7.15, name = "Enter Record A Studios", destination = {221}}, -- 1106 Chilliad
+
+	-- 7255 The Contract Office 1
+	[223] = {id = 223, x = -1032.70, y = -421.54, z = 39.62, h = 23.30, name = "Lombard Office Lobby", destination = {224,225}}, -- 7255 Rockford Hills
+	[224] = {id = 224, x = -1033.06, y = -434.80, z = 63.86, h = 301.65, name = "Main Office", destination = {223,225}}, -- 7255 Rockford Hills
+	[225] = {id = 225, x = -1031.89, y = -438.25, z = 72.46, h = 295.11, name = "Office Apartment", destination = {223,224}}, -- 7255 Rockford Hills
+	
+	-- 7255 The Contract Office 2
+	[226] = {id = 226, x = -1032.70, y = -421.54, z = 39.62, h = 23.30, name = "Lombard Office Lobby", destination = {227,228}}, -- 7255 Rockford Hills
+	[227] = {id = 227, x = -1033.06, y = -434.80, z = 63.86, h = 301.65, name = "Main Office", destination = {226,228}}, -- 7255 Rockford Hills
+	[228] = {id = 228, x = -1031.89, y = -438.25, z = 72.46, h = 295.11, name = "Office Apartment", destination = {226,227}}, -- 7255 Rockford Hills
+	]]
 }
 
 -- Don't edit below this line.
