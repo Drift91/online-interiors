@@ -189,8 +189,8 @@ local teleports = {
 	[192] = {text = "Casino Management", dest = {191}, x = 1107.16, y = 243.04, z = -45.84, h = 283.28},
 	[193] = {text = "Casino Management Top Floor", dest = {194}, x = 1119.42, y = 267.31, z = -45.84, h = 178.82},
 	[194] = {text = "Casino Management Ground Floor", dest = {193}, x = 1119.34, y = 267.10, z = -51.04, h = 176.59},
-	[195] = {text = "Exit Casino", dest = {194}, x = 935.98, y = 46.24, z = 81.10, h = 152.99},
-	[196] = {text = "Enter Casino", dest = {193}, x = 1089.61, y = 206.12, z = -49.00, h = 11.29},
+	[195] = {text = "Exit Casino", dest = {196}, x = 935.98, y = 46.24, z = 81.10, h = 152.99},
+	[196] = {text = "Enter Casino", dest = {195}, x = 1089.61, y = 206.12, z = -49.00, h = 11.29},
 	-- Pillbox
 	[197] = {text = "Basement", dest = {198,199,200}, x = 343.40, y = -581.73, z = 28.8, h = 75.31},
 	[198] = {text = "Ground Floor", dest = {197, 199,200}, x = 342.32, y = -585.56, z = 28.8, h = 244.79},
