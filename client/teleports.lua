@@ -305,7 +305,7 @@ local function DrawHelp(teleport)
 			DisableControlAction(0, 86, true)
 
 			BeginTextCommandDisplayHelp("STRING")
-			AddTextComponentSubstringPlayerName("Press ~INPUT_PICKUP~ to open doors.")
+			AddTextComponentSubstringPlayerName("Press ~INPUT_PICKUP~ to enter.")
 			EndTextCommandDisplayHelp(0, false, true, 1)
 
 			if (IsDisabledControlJustPressed(0, 38)) then
