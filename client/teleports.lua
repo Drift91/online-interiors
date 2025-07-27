@@ -635,7 +635,7 @@ Citizen.CreateThread(function()
 						DrawHelp(i)
 					end
 				else
-					if (GetPedInVehicleSeat(vehicle, -1) == player) then
+					if (GetPedInVehicleSeat(vehicle, -1) == player) and var.veh then
 						if (#var.dest > 1) then
 							DrawMenu(i)
 						elseif (#var.dest == 1) then
