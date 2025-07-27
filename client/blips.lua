@@ -1,21 +1,22 @@
 local blips = {
+
     -- Story Mode Houses
-    {text = "Michael's House", color = 2, sprite = 40, coord = vector3(-817.93, 177.68, 72.22)},
-    {text = "Franklin's House", color = 69, sprite = 40, coord = vector3(8.32, 539.75, 176.03)}, -- Mansion
-    {text = "Franklin's House", color = 69, sprite = 40, coord = vector3(-14.19, -1442.09, 31.1)}, -- Yee Yee Ass Haircut, Aunt Denise
-	{text = "Trevor's Trailer", color = 40, sprite = 40, coord = vector3(1981.51, 3819.35, 32.25)},
-	{text = "Floyd's House", color = 27, sprite = 40, coord = vector3(-1157.31, -1516.72, 4.36)},
-	{text = "Lester's House", color = 1, sprite = 40, coord = vector3(1274.65, -1720.83, 54.68)},
+    --{text = "Michael's House", color = 2, sprite = 40, coord = vector3(-817.93, 177.68, 72.22)},
+    --{text = "Franklin's House", color = 69, sprite = 40, coord = vector3(8.32, 539.75, 176.03)}, -- Mansion
+    --{text = "Franklin's House", color = 69, sprite = 40, coord = vector3(-14.19, -1442.09, 31.1)}, -- Yee Yee Ass Haircut, Aunt Denise
+	--{text = "Trevor's Trailer", color = 40, sprite = 40, coord = vector3(1981.51, 3819.35, 32.25)},
+	--{text = "Floyd's House", color = 27, sprite = 40, coord = vector3(-1157.31, -1516.72, 4.36)},
+	--{text = "Lester's House", color = 1, sprite = 40, coord = vector3(1274.65, -1720.83, 54.68)},
 	
 	-- Lester's Factory 
-    {text = "Lester's Factory", color = 3, sprite = 475, coord = vector3(717.93, -976.46, 24.91)},
+    --{text = "Lester's Factory", color = 3, sprite = 475, coord = vector3(717.93, -976.46, 24.91)},
 	
 	
 	-- Simeon's Dealership 
-    {text = "Simeon's Dealership", color = 0, sprite = 293, coord = vector3(-68.22, -1111.15, 25.91)},
+    --{text = "Simeon's Dealership", color = 0, sprite = 293, coord = vector3(-68.22, -1111.15, 25.91)},
 	
 	-- O'Neil Farm 
-    {text = "O'Neil Farm", color = 69, sprite = 270, coord = vector3(2453.57, 4955.34, 44.96)},
+    --{text = "O'Neil Farm", color = 69, sprite = 270, coord = vector3(2453.57, 4955.34, 44.96)},
 
     -- Apartments
     {text = "Apartment", color = 3, sprite = 40, coord = vector3(-911.91, -451.08, 39.61)},
@@ -100,10 +101,10 @@ local blips = {
     {text = "Split Sides West", color = 0, sprite = 102, coord = vector3(-430.17, 261.5, 82.32)},
 
     -- LSIA
-    {text = "LSIA", color = 0, sprite = 307, coord = vector3(-1045.95, -2751.59, 21.0)},
+    --{text = "LSIA", color = 0, sprite = 307, coord = vector3(-1045.95, -2751.59, 21.0)},
 
     -- Morgue
-    {text = "Morgue", color = 49, sprite = 61, coord = vector3(240.74, -1379.18, 33.55)},
+    --{text = "Morgue", color = 49, sprite = 61, coord = vector3(240.74, -1379.18, 33.55)},
 
     -- Bahama Mamas
     {text = "Bahama Mamas", color = 0, sprite = 93, coord = vector3(-1388.67, -586.68, 30.2)},
@@ -166,7 +167,7 @@ local blips = {
     {text = "Legion Square", color = 30, sprite = 77, coord = vector3(189.13, -967.22, 29.82)},
 
     -- Sandy Shores Airfield --
-    {text = "Sandy Shores Airfield", color = 4, sprite = 584, coord = vector3(1341.36, 3109.89, 40.7)},
+    --{text = "Sandy Shores Airfield", color = 4, sprite = 584, coord = vector3(1341.36, 3109.89, 40.7)},
 
     -- Stores --
     {text = "Store", color = 4, sprite = 59, coord = vector3(28.88, -1351.34, 29.34)},
@@ -205,7 +206,7 @@ local blips = {
 	
 
 	-- Bolingbroke Penitentiary --
-    {text = "Bolingbroke Penitentiary", color = 47, sprite = 526, coord = vector3(1851.78, 2606.26, 45.67)},
+    --{text = "Bolingbroke Penitentiary", color = 47, sprite = 526, coord = vector3(1851.78, 2606.26, 45.67)},
 	
 	-- Fort Zancudo --
     {text = "Fort Zancudo", color = 76, sprite = 421, coord = vector3(-2067.11, 3097.35,32.81)},
@@ -254,7 +255,7 @@ local blips = {
     {text = "Solomon's Office", color = 70, sprite = 475, coord = vector3(-1011.41, -479.98, 39.97)},
 	
     -- Torture Room 
-    {text = "Torture Room", color = 1, sprite = 458, coord = vector3(960.57, -2185.24, 30.5)},
+    --{text = "Torture Room", color = 1, sprite = 458, coord = vector3(960.57, -2185.24, 30.5)},
 	
 	
 	-- Banks 
