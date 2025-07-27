@@ -435,18 +435,14 @@ local function DrawMenu(teleport)
 	end
 end
 
-local player; local vehicle
+local player; local vehicle; local NearTeleports
 Citizen.CreateThread(function()
 	while (true) do
 		player = PlayerPedId()
 		vehicle = GetVehiclePedIsIn(player, false)
-		Citizen.Wait(0)
-	end
-end)
 
-for i,var in pairs(teleports) do
-	Citizen.CreateThread(function()
-		while (true) do
+		NearTeleports = {}
+		for i,var in pairs(teleports) do
 			if (#var.dest > 0) then
 				local distance
 				if (vehicle == 0) then
@@ -454,34 +450,43 @@ for i,var in pairs(teleports) do
 				else
 					distance = #(GetEntityCoords(vehicle) - vector3(var.x, var.y, var.z + 1.0))
 				end
-				
+				var.distance = distance
+
 				if (distance < 100.0) then
-					DrawMarker(1, var.x, var.y, var.z - 1.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.7, 0.7, 0.9, 255, 255, 255, 255, false, false, 2, false, nil, nil, false)
-					-- DrawMarker(1, var.x, var.y, var.z - 1.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.5, 2.5, 0.9, 255, 255, 255, 255, false, false, 2, false, nil, nil, false)
-					
-					if (distance < 2.0) then
-						if (vehicle == 0) then
-							if (#var.dest > 1) then
-								DrawMenu(i)
-							else
-								DrawHelp(i)
-							end
-						else
-							if (GetPedInVehicleSeat(vehicle, -1) == player) then
-								if (#var.dest > 1) then
-									DrawMenu(i)
-								elseif (#var.dest == 1) then
-									DrawHelp(i)
-								end
-							end 
-						end
-					end
-				else
-					Citizen.Wait(500)
+					NearTeleports[i] = var
 				end
 			end
-
-			Citizen.Wait(0)
 		end
-	end)
-end
+
+		Citizen.Wait(500)
+	end
+end)
+
+Citizen.CreateThread(function()
+	while (true) do
+		for i,var in pairs(NearTeleports) do
+			DrawMarker(1, var.x, var.y, var.z - 1.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.7, 0.7, 0.9, 255, 255, 255, 255, false, false, 2, false, nil, nil, false)
+			-- DrawMarker(1, var.x, var.y, var.z - 1.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.5, 2.5, 0.9, 255, 255, 255, 255, false, false, 2, false, nil, nil, false)
+
+			if (var.distance < 2.0) then
+				if (vehicle == 0) then
+					if (#var.dest > 1) then
+						DrawMenu(i)
+					else
+						DrawHelp(i)
+					end
+				else
+					if (GetPedInVehicleSeat(vehicle, -1) == player) then
+						if (#var.dest > 1) then
+							DrawMenu(i)
+						elseif (#var.dest == 1) then
+							DrawHelp(i)
+						end
+					end 
+				end
+			end
+		end
+
+		Citizen.Wait(0)
+	end
+end)
