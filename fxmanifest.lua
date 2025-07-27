@@ -4,6 +4,9 @@ game 'gta5'
 author 'Cloudy'
 version '2.1'
 
+lua54 'yes'
+use_experimental_fxv2_oal 'yes'
+
 dependencies {
     'bob74_ipl'
 }
