@@ -441,7 +441,7 @@ local function Teleport(teleport)
 				NetworkFadeOutEntity(entity, false, true)
 				Citizen.Wait(500)
 
-				SetEntityCoordsNoOffset(entity, var.x, var.y, var.z, false, false, false)
+				SetEntityCoordsNoOffset(entity, var.coord.x, var.coord.y, var.coord.z, false, false, false)
 				SetGameplayCamRelativeHeading(var.h)
 				SetGameplayCamRelativePitch(-20.0, 1.0)
 				SetEntityHeading(entity, var.h)
@@ -605,9 +605,9 @@ Citizen.CreateThread(function()
 			if (#var.dest > 0) then
 				local distance
 				if (vehicle == 0) then
-					distance = #(GetEntityCoords(player) - vector3(var.x, var.y, var.z + 1.0))
+					distance = #(GetEntityCoords(player) - vector3(var.coord.x, var.coord.y, var.coord.z + 1.0))
 				else
-					distance = #(GetEntityCoords(vehicle) - vector3(var.x, var.y, var.z + 1.0))
+					distance = #(GetEntityCoords(vehicle) - vector3(var.coord.x, var.coord.y, var.coord.z + 1.0))
 				end
 				var.distance = distance
 
@@ -624,8 +624,8 @@ end)
 Citizen.CreateThread(function()
 	while (true) do
 		for i,var in pairs(NearTeleports) do
-			DrawMarker(1, var.x, var.y, var.z - 1.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.7, 0.7, 0.9, 255, 255, 255, 255, false, false, 2, false, nil, nil, false)
-			-- DrawMarker(1, var.x, var.y, var.z - 1.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.5, 2.5, 0.9, 255, 255, 255, 255, false, false, 2, false, nil, nil, false)
+			DrawMarker(1, var.coord.x, var.coord.y, var.coord.z - 1.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.7, 0.7, 0.9, 255, 255, 255, 255, false, false, 2, false, nil, nil, false)
+			-- DrawMarker(1, var.coord.x, var.coord.y, var.coord.z - 1.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.5, 2.5, 0.9, 255, 255, 255, 255, false, false, 2, false, nil, nil, false)
 
 			if (var.distance < 2.0) then
 				if (vehicle == 0) then
